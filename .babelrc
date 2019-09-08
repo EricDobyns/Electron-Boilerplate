@@ -1,0 +1,8 @@
+{
+    "presets": [
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        "transform-class-properties" // Enable fat arrow functions for use in react
+    ]
+}

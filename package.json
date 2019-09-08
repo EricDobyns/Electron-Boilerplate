@@ -1,0 +1,48 @@
+{
+  "name": "electron-react-webpack",
+  "version": "1.0.0",
+  "description": "Electron + React 16 + Webpack 4 Template",
+  "main": "main_process.js",
+  "author": "Eric Dobyns <edobyns@titanhst.com>",
+  "repository": "",
+  "license": "",
+  "build": {
+    "productName": "Titan HST",
+    "appId": "",
+    "mac": {
+      "category": "",
+      "icon": "src/assets/appIcon.png"
+    }
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel bundle serve",
+    "start:production": "npm-run-all --parallel bundle:production serve",
+    "bundle": "webpack --env development",
+    "bundle:production": "webpack --env production",
+    "serve": "electron .",
+    "package": "npm run clean && npm run bundle:production && electron-builder --dir",
+    "dist": "npm run clean && npm run bundle:production && electron-builder",
+    "clean": "rm -rf dist && rm -rf app/build"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "axios": "^0.18.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "electron": "^1.8.2",
+    "electron-builder": "^20.39.0",
+    "electron-reload": "^1.2.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.10",
+    "npm-run-all": "^4.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}

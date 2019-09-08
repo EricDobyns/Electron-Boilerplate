@@ -1,0 +1,16 @@
+/* Global Constants */
+:root {
+    --primary-color: #ffffff;
+}
+
+
+/* Global CSS */
+:global html {
+    height: 100%;
+}
+
+:global body {
+    display: flex;
+    height: 100%;
+    margin: auto;
+}
